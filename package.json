@@ -1,0 +1,14 @@
+{
+  "name": "luframe",
+  "version": "1.0.0",
+  "description": "旅帧 - 旅行相册小程序",
+  "main": "app.js",
+  "scripts": {
+    "dev": "echo '请使用微信开发者工具打开 miniprogram 目录'",
+    "build": "echo '构建完成'",
+    "lint": "eslint miniprogram/**/*.js"
+  },
+  "keywords": ["miniprogram", "travel", "photo", "album"],
+  "author": "Lauren001Hug",
+  "license": "MIT"
+}

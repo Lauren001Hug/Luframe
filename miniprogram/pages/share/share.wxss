@@ -1,0 +1,66 @@
+.share-header {
+  text-align: center;
+  padding: 40rpx 0 30rpx;
+}
+.share-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+}
+.share-subtitle {
+  font-size: 26rpx;
+  color: var(--text-muted);
+  margin-top: 10rpx;
+  display: block;
+}
+.share-actions {
+  margin-bottom: 30rpx;
+}
+.share-card {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+}
+.share-icon {
+  font-size: 44rpx;
+  margin-right: 24rpx;
+}
+.share-info {
+  flex: 1;
+}
+.share-name {
+  font-size: 30rpx;
+  font-weight: 500;
+  display: block;
+}
+.share-desc {
+  font-size: 24rpx;
+  color: var(--text-muted);
+  margin-top: 4rpx;
+}
+.share-arrow {
+  color: var(--text-muted);
+}
+.qrcode-section {
+  text-align: center;
+  padding: 30rpx;
+}
+.qrcode-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.qrcode-img {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  display: block;
+}
+.qrcode-tip {
+  font-size: 24rpx;
+  color: var(--text-muted);
+  margin-top: 16rpx;
+  display: block;
+}

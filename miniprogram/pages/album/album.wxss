@@ -1,0 +1,88 @@
+/* 相册列表样式 */
+.search-bar {
+  padding: 20rpx 0;
+}
+.search-input {
+  background: #fff;
+  border-radius: 40rpx;
+  padding: 16rpx 30rpx;
+  font-size: 28rpx;
+}
+
+/* 分类筛选 */
+.category-scroll {
+  white-space: nowrap;
+  padding: 10rpx 0 20rpx;
+}
+.category-item {
+  display: inline-block;
+  padding: 12rpx 28rpx;
+  margin-right: 16rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  background: #fff;
+  color: var(--text-secondary);
+}
+.category-item.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* 相册卡片 */
+.album-item {
+  display: flex;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.album-cover {
+  width: 200rpx;
+  height: 160rpx;
+  border-radius: 12rpx;
+  flex-shrink: 0;
+  background: #eee;
+}
+.album-content {
+  flex: 1;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.album-title {
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.album-desc {
+  font-size: 24rpx;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.album-footer {
+  font-size: 22rpx;
+}
+.album-stats {
+  display: flex;
+  gap: 20rpx;
+  color: var(--text-muted);
+}
+.album-date {
+  color: var(--text-muted);
+}
+
+/* 空状态 */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200rpx;
+}
+.empty-icon {
+  font-size: 80rpx;
+}
+.empty-text {
+  color: var(--text-muted);
+  margin-top: 20rpx;
+}

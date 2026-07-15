@@ -1,0 +1,144 @@
+/* 首页样式 */
+.banner {
+  position: relative;
+  height: 320rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  margin: 20rpx 0;
+}
+.banner-img {
+  width: 100%;
+  height: 100%;
+}
+.banner-content {
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  color: #fff;
+}
+.banner-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  display: block;
+  text-shadow: 0 2rpx 4rpx rgba(0,0,0,0.3);
+}
+.banner-subtitle {
+  font-size: 26rpx;
+  opacity: 0.9;
+  margin-top: 8rpx;
+  display: block;
+}
+
+/* 快捷入口 */
+.quick-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx 0;
+  background: #fff;
+  border-radius: 16rpx;
+  margin: 20rpx 0;
+}
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.action-icon {
+  font-size: 48rpx;
+  margin-bottom: 10rpx;
+}
+.action-text {
+  font-size: 24rpx;
+  color: var(--text-secondary);
+}
+
+/* 区域标题 */
+.section {
+  margin: 30rpx 0;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.section-title {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.section-more {
+  font-size: 26rpx;
+  color: var(--text-muted);
+}
+
+/* 相册横向滚动 */
+.album-scroll {
+  white-space: nowrap;
+}
+.album-card {
+  display: inline-block;
+  width: 240rpx;
+  margin-right: 20rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  background: #fff;
+}
+.album-cover {
+  width: 100%;
+  height: 180rpx;
+  background: #eee;
+}
+.album-info {
+  padding: 16rpx;
+}
+.album-name {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.album-meta {
+  font-size: 22rpx;
+  color: var(--text-muted);
+  margin-top: 6rpx;
+}
+.album-photos {
+  margin-right: 16rpx;
+}
+
+/* 游记列表 */
+.travel-item {
+  margin-bottom: 20rpx;
+}
+.travel-header {
+  margin-bottom: 16rpx;
+}
+.author-avatar {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background: #eee;
+  margin-right: 12rpx;
+}
+.author-name {
+  font-size: 26rpx;
+  color: var(--text-secondary);
+}
+.travel-time {
+  font-size: 22rpx;
+  color: var(--text-muted);
+}
+.travel-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  margin-bottom: 16rpx;
+  display: block;
+  line-height: 1.5;
+}
+.travel-images {
+  gap: 10rpx;
+}
+.travel-img {
+  width: 210rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  background: #eee;
+}

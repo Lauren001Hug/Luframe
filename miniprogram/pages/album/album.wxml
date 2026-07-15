@@ -1,0 +1,47 @@
+<!-- 相册列表页 -->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <input class="search-input" placeholder="搜索相册..." value="{{keyword}}" bindinput="onSearch" />
+  </view>
+
+  <!-- 分类筛选 -->
+  <scroll-view class="category-scroll" scroll-x>
+    <view class="category-item {{currentCategory === item.id ? 'active' : ''}}" 
+          wx:for="{{categories}}" wx:key="id" 
+          bindtap="switchCategory" data-id="{{item.id}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <!-- 相册列表 -->
+  <view class="album-list">
+    <view class="album-item card" wx:for="{{albums}}" wx:key="_id" bindtap="viewAlbum" data-id="{{item._id}}">
+      <image class="album-cover" src="{{item.cover}}" mode="aspectFill" />
+      <view class="album-content">
+        <text class="album-title">{{item.name}}</text>
+        <text class="album-desc">{{item.description || '暂无描述'}}</text>
+        <view class="album-footer flex-between">
+          <view class="album-stats">
+            <text class="stat-item">📷 {{item.photoCount || 0}}</text>
+            <text class="stat-item">❤️ {{item.likeCount || 0}}</text>
+            <text class="stat-item">💬 {{item.commentCount || 0}}</text>
+          </view>
+          <text class="album-date">{{item.createTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty" wx:if="{{!loading && albums.length === 0}}">
+    <text class="empty-icon">📷</text>
+    <text class="empty-text">还没有相册，快去创建第一个吧</text>
+    <button class="btn-primary mt-30" bindtap="createAlbum">创建相册</button>
+  </view>
+
+  <!-- 加载更多 -->
+  <view class="load-more" wx:if="{{hasMore}}">
+    <text>{{loading ? '加载中...' : '上拉加载更多'}}</text>
+  </view>
+</view>

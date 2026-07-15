@@ -1,0 +1,51 @@
+<!-- 我的 -->
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="user-card card">
+    <view class="user-info flex">
+      <image class="user-avatar" src="{{userInfo.avatarUrl || '/assets/default-avatar.png'}}" />
+      <view class="user-detail">
+        <text class="user-name">{{userInfo.nickName || '点击登录'}}</text>
+        <text class="user-signature">{{userInfo.signature || '记录每一段旅程'}}</text>
+      </view>
+    </view>
+    <view class="user-stats flex">
+      <view class="stat-item">
+        <text class="stat-num">{{userInfo.albumCount || 0}}</text>
+        <text class="stat-label">相册</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-num">{{userInfo.photoCount || 0}}</text>
+        <text class="stat-label">照片</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-num">{{userInfo.followerCount || 0}}</text>
+        <text class="stat-label">粉丝</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="menu-section">
+    <view class="menu-group">
+      <text class="menu-group-title">我的内容</text>
+      <view class="menu-item" wx:for="{{myMenus}}" wx:key="id" bindtap="onMenuTap" data-url="{{item.url}}">
+        <text class="menu-icon">{{item.icon}}</text>
+        <text class="menu-text">{{item.name}}</text>
+        <text class="menu-arrow">></text>
+      </view>
+    </view>
+
+    <view class="menu-group">
+      <text class="menu-group-title">设置</text>
+      <view class="menu-item" wx:for="{{settingMenus}}" wx:key="id" bindtap="onMenuTap" data-url="{{item.url}}">
+        <text class="menu-icon">{{item.icon}}</text>
+        <text class="menu-text">{{item.name}}</text>
+        <text class="menu-arrow">></text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 退出登录 -->
+  <button class="logout-btn" wx:if="{{isLogin}}" bindtap="logout">退出登录</button>
+</view>

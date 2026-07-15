@@ -1,0 +1,26 @@
+<!-- 分享页 -->
+<view class="container">
+  <view class="share-header">
+    <text class="share-title">分享你的旅行</text>
+    <text class="share-subtitle">让更多人看到你的精彩旅程</text>
+  </view>
+
+  <!-- 分享操作 -->
+  <view class="share-actions">
+    <view class="share-card card" wx:for="{{shareOptions}}" wx:key="id" bindtap="onShare" data-type="{{item.type}}">
+      <view class="share-icon">{{item.icon}}</view>
+      <view class="share-info">
+        <text class="share-name">{{item.name}}</text>
+        <text class="share-desc">{{item.desc}}</text>
+      </view>
+      <text class="share-arrow">></text>
+    </view>
+  </view>
+
+  <!-- 二维码 -->
+  <view class="qrcode-section card">
+    <text class="qrcode-title">扫码分享小程序</text>
+    <image class="qrcode-img" src="{{qrcodeUrl}}" mode="aspectFit" />
+    <text class="qrcode-tip">让朋友扫码直接进入旅帧</text>
+  </view>
+</view>

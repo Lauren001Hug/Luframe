@@ -1,0 +1,73 @@
+<!-- 首页 - 旅帧 -->
+<view class="container">
+  <!-- 顶部 Banner -->
+  <view class="banner">
+    <image class="banner-img" src="../../assets/banner.png" mode="aspectFill" />
+    <view class="banner-content">
+      <text class="banner-title">记录每一段旅程</text>
+      <text class="banner-subtitle">让回忆有温度，让旅行有故事</text>
+    </view>
+  </view>
+
+  <!-- 快捷入口 -->
+  <view class="quick-actions">
+    <view class="action-item" bindtap="createAlbum">
+      <view class="action-icon">📸</view>
+      <text class="action-text">创建相册</text>
+    </view>
+    <view class="action-item" bindtap="quickShare">
+      <view class="action-icon">🎉</view>
+      <text class="action-text">快速分享</text>
+    </view>
+    <view class="action-item" bindtap="aiBeautify">
+      <view class="action-icon">✨</view>
+      <text class="action-text">AI 美化</text>
+    </view>
+    <view class="action-item" bindtap="nearby">
+      <view class="action-icon">🗺️</view>
+      <text class="action-text">附近景点</text>
+    </view>
+  </view>
+
+  <!-- 热门相册 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">热门相册</text>
+      <text class="section-more" bindtap="viewAll">更多 ></text>
+    </view>
+    <scroll-view class="album-scroll" scroll-x>
+      <view class="album-card" wx:for="{{hotAlbums}}" wx:key="id" bindtap="viewAlbum" data-id="{{item.id}}">
+        <image class="album-cover" src="{{item.cover}}" mode="aspectFill" />
+        <view class="album-info">
+          <text class="album-name ellipsis">{{item.name}}</text>
+          <view class="album-meta">
+            <text class="album-photos">{{item.photoCount}}张照片</text>
+            <text class="album-likes">{{item.likeCount}}赞</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 推荐内容 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">推荐游记</text>
+    </view>
+    <view class="travel-list">
+      <view class="travel-item card" wx:for="{{travelNotes}}" wx:key="id">
+        <view class="travel-header flex-between">
+          <view class="travel-author flex">
+            <image class="author-avatar" src="{{item.avatar}}" />
+            <text class="author-name">{{item.author}}</text>
+          </view>
+          <text class="travel-time">{{item.time}}</text>
+        </view>
+        <text class="travel-title">{{item.title}}</text>
+        <view class="travel-images flex">
+          <image class="travel-img" wx:for="{{item.images}}" wx:for-item="img" wx:key="*this" src="{{img}}" mode="aspectFill" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
