@@ -1,0 +1,19 @@
+<!-- 登录页 -->
+<view class="login-container">
+  <view class="login-logo">
+    <text class="logo-icon">📷</text>
+    <text class="logo-text">旅帧</text>
+    <text class="logo-slogan">记录每一段旅程</text>
+  </view>
+
+  <view class="login-card">
+    <text class="login-title">欢迎使用旅帧</text>
+    <text class="login-desc">登录后可创建相册、保存照片、与好友分享</text>
+
+    <button class="login-btn" bindtap="login">
+      <text>微信一键登录</text>
+    </button>
+
+    <text class="login-tip">登录即代表同意《用户协议》和《隐私政策》</text>
+  </view>
+</view>
